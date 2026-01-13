@@ -3,7 +3,9 @@ import { GoodCard } from './GoodCard';
 export const GoodList = ({ goods }) => {
   return (
     <ul>
-      <GoodCard goods={goods} />
+      {goods.map((good) => (
+        <GoodCard key={good} good={good} />
+      ))}
     </ul>
   );
 };
